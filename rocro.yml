@@ -2,11 +2,11 @@
 inspecode:
 
   astyle:
-    autofix: true
+    auto-fix: true
     thresholds: { num-issues: 999 }
 
   clang-format:
-    autofix: true
+    auto-fix: true
     thresholds: { num-issues: 999 }
 
   cpd:
@@ -35,7 +35,7 @@ inspecode:
     thresholds: { num-issues: 999 }
 
   misspell:
-    autofix: true
+    auto-fix: true
     thresholds: { num-issues: 999 }
 
   scan-build:
