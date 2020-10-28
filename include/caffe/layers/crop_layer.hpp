@@ -65,7 +65,7 @@ private:
     // Recursive copy function: this is similar to crop_copy() but loops over all
     // but the last two dimensions to allow for ND cropping while still relying on
     // a CUDA kernel for the innermost two dimensions for performance reasons.  An
-    // alterantive implementation could rely on the kernel more by passing
+    // alternative implementation could rely on the kernel more by passing
     // offsets, but this is problematic because of its variable length.
     // Since in the standard (N,C,W,H) case N,C are usually not cropped a speedup
     // could be achieved by not looping the application of the copy_kernel around

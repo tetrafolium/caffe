@@ -85,7 +85,7 @@ public:
      *     the allocated but unshaped output blobs
      *
      * This method should do one-time layer specific setup. This includes reading
-     * and processing relevent parameters from the <code>layer_param_</code>.
+     * and processing relevant parameters from the <code>layer_param_</code>.
      * Setting up the shapes of top blobs and internal buffers should be done in
      * <code>Reshape</code>, which will be called before the forward pass to
      * adjust the top blob sizes.
