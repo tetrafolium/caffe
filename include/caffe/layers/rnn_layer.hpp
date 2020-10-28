@@ -28,18 +28,20 @@ template <typename Dtype> class RecurrentLayer;
  */
 template <typename Dtype>
 class RNNLayer : public RecurrentLayer<Dtype> {
- public:
-  explicit RNNLayer(const LayerParameter& param)
-      : RecurrentLayer<Dtype>(param) {}
+public:
+    explicit RNNLayer(const LayerParameter& param)
+        : RecurrentLayer<Dtype>(param) {}
 
-  virtual inline const char* type() const { return "RNN"; }
+    virtual inline const char* type() const {
+        return "RNN";
+    }
 
- protected:
-  virtual void FillUnrolledNet(NetParameter* net_param) const;
-  virtual void RecurrentInputBlobNames(vector<string>* names) const;
-  virtual void RecurrentOutputBlobNames(vector<string>* names) const;
-  virtual void RecurrentInputShapes(vector<BlobShape>* shapes) const;
-  virtual void OutputBlobNames(vector<string>* names) const;
+protected:
+    virtual void FillUnrolledNet(NetParameter* net_param) const;
+    virtual void RecurrentInputBlobNames(vector<string>* names) const;
+    virtual void RecurrentOutputBlobNames(vector<string>* names) const;
+    virtual void RecurrentInputShapes(vector<BlobShape>* shapes) const;
+    virtual void OutputBlobNames(vector<string>* names) const;
 };
 
 }  // namespace caffe
